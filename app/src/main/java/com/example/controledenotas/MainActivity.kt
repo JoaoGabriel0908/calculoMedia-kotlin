@@ -17,23 +17,36 @@ class MainActivity : AppCompatActivity() {
         val sair = findViewById<Button>(R.id.sair)
 
         calcular.setOnClickListener {
-            val nota1 = findViewById<EditText>(R.id.nota1).text.toString().toInt()
-            val nota2 = findViewById<EditText>(R.id.nota2).text.toString().toInt()
+            val peso = findViewById<EditText>(R.id.peso).text.toString().toDouble()
+            val altura = findViewById<EditText>(R.id.altura).text.toString().toDouble()
             val resultado = findViewById<TextView>(R.id.resultado)
-            val notaTotal = findViewById<TextView>(R.id.media)
-            val notas = findViewById<TextView>(R.id.notas)
+            val mensagem = findViewById<TextView>(R.id.message)
 
-            val media = (nota1 + nota2) / 2;
+            val imc = peso / (altura * altura) ;
 
-            if (media >= 5) {
-                notas.text = "Nota 1° Semestre ${nota1} \n Nota 2° Semestre ${nota2} \n"
-                resultado.text = "Aprovado"
-                notaTotal.text = "Sua Média ${media}"
+            if (imc < 18.5) {
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
                 resultado.setTextColor(Color.GREEN)
-            } else {
-                notas.text = "Nota 1° Semestre ${nota1} \n Nota 2° Semestre ${nota2} \n"
-                resultado.text = "Reprovado"
-                notaTotal.text = "Sua Média: ${media}"
+            } else if (imc < 25) {
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
+                resultado.setTextColor(Color.GREEN)
+            } else if(imc < 30){
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
+            } else if(imc < 35){
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
+            } else if(imc < 40){
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
+            } else if(imc < 45){
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
+            } else{
+                mensagem.text = "Seu IMC é:"
+                resultado.text = "${imc}"
                 resultado.setTextColor(Color.RED)
             }
 

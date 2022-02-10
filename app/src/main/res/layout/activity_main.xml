@@ -15,45 +15,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="62dp"
-        android:layout_marginBottom="48dp"
-        android:text="Situação do Aluno"
+        android:layout_marginBottom="30dp"
+        android:text="Cálculo IMC"
         android:textColor="@color/dark"
         android:textSize="32sp" />
 
     <!--Estilizando o texto-->
     <EditText
-        android:id="@+id/nota1"
+        android:id="@+id/altura"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="Nota 1"
-        android:inputType="number"
+        android:hint="Altura"
+        android:inputType="numberDecimal"
         android:textColor="@color/dark"/>
 
     <EditText
-        android:id="@+id/nota2"
+        android:id="@+id/peso"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="Nota 2"
-        android:inputType="number"
+        android:hint="Peso"
+        android:inputType="numberDecimal"
         android:textColor="@color/dark"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"/>
 
-    <EditText
-        android:id="@+id/faltas"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Faltas"
-        android:inputType="number"
-        android:textColor="@color/dark"/>
 
     <!--Uma divisão para os botões-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="48dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
 
         <!--Estilizando os botões-->
         <Button
@@ -75,10 +68,10 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/notas"
+        android:id="@+id/imc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notas"
+        android:text="imc"
         android:textSize="18dp"
         android:textColor="@color/dark"
         android:textAlignment="center"
@@ -87,7 +80,7 @@
         android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Texto para Teste"
+        android:text="Resultado"
         android:textSize="24dp"
         android:textColor="@color/dark"
         android:textAlignment="center" />
@@ -96,7 +89,7 @@
         android:id="@+id/media"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Média"
+        android:text="Mensagem"
         android:textSize="18dp"
         android:textColor="@color/dark"
         android:layout_marginTop="10dp"
