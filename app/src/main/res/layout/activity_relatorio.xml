@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityRelatorio"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/teal_200">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Situação IMC"
+        android:textSize="36dp"
+        android:textColor="@color/dark"
+        android:layout_marginBottom="48dp"/>
+
+    <LinearLayout style="@style/campos">
+
+        <TextView
+            android:text="Peso:"
+            style="@style/label" />
+        <TextView
+            android:id="@+id/peso"
+            style="@style/input" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/campos">
+
+        <TextView
+            android:text="Altura:"
+            style="@style/label" />
+        <TextView
+            android:id="@+id/altura"
+            style="@style/input" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/campos">
+
+        <TextView
+            android:text="IMC:"
+            style="@style/label" />
+        <TextView
+            android:id="@+id/situacao"
+            style="@style/input" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/campos">
+
+        <TextView
+            android:text="Situação IMC:"
+            style="@style/label" />
+        <TextView
+
+            style="@style/input" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.controledenotas
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             pesoEditText = findViewById<EditText>(R.id.peso)
             alturaEditText = findViewById<EditText>(R.id.altura)
 
-            val resultado = findViewById<TextView>(R.id.resultado)
+            val situacao = findViewById<TextView>(R.id.resultado)
             val mensagem = findViewById<TextView>(R.id.message)
 
             if (validarCampos()){
@@ -32,7 +33,17 @@ class MainActivity : AppCompatActivity() {
 
                 val imc = calcularImc(peso, altura)
 
-                resultado.text = situacaoImc(imc)
+                val intent = Intent(this, activityRelatorio::class.java)
+
+                intent.putExtra("peso", "${peso}")
+                intent.putExtra("altura", "${altura}")
+                intent.putExtra("situacao", situacaoImc(imc))
+
+
+                startActivity(intent)
+
+
+/*                resultado.text = situacaoImc(imc)*/
             }
 
             }
@@ -53,5 +64,4 @@ class MainActivity : AppCompatActivity() {
         }
         return noError
     }
-
 }
